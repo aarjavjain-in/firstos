@@ -2,27 +2,110 @@
 <html>
 
 <style>
-h1 {text-align: center;}
-p {text-align: center;}
+  body {
+    
+    background-image: url('win11.jpg');
+   
+  }
 
-img.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* optional width constraint */
-  max-width: 100%;
-}
+  #movablewin1 {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 10;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+  }
+
+  #movablediv3 {
+    position: fixed;
+    top: 180px;
+    left: 240px;
+    z-index: 10;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+  }
+
+  #movablediv3:active {
+    cursor: grabbing;
+  }
+
+  .window-control {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+  }
 </style>
-  <body style="background-color: #237679; font-family: Times, 'Times New Roman', serif;">
-     <h1 style="margin: 10px;">Welcome to my OS</h1>
- <h1 background-color: #fff;>hey yyy its my first git proj</h1>
-  <p>Helloooo world!</p>
-  <div align="center">
-   <a href="https://stardance.hackclub.com/home" align="center" >click me</a>
-   </div>
-   <div align="center">
-  <img src="image.jpg" style="width: 1280px; height: 720px; border-radius: 50%;"/>
+
+<body style="background-color: rgba(0, 0, 0, 20);">
+
+
+
+  <h1 style="margin: 10px;" style="background-color: rgb(60, 153, 23);">Welcome to my OS</h1>
+  <h1 style="background-color: #9e1eaf;">hey yyy its my first git proj</h1>
+  <p style="background-color: aqua;">Helloooo world!</p>
+  <div align="center"style="background-color: aqua;">
+    <a href="https://stardance.hackclub.com/home" align="center">click me</a>
+  </div>
+  <div align="center" style="border: 1rem solid;">
+    <img src="image.jpg" style="width: 1280px; height: 720px; border-radius: 25%;" />
+  </div>
+
+  <div align="center" style="border: solid; padding: 30px;">
+    <img src="image2.jpg" style="width: 1280px; height: 720px; border-radius: 25%;" />
+
+    <div>
+      <h1 style="position: absolute; top: 50%; left: 50%; color: rgb(9, 202, 73); font-size: 24px; text-align: center;"></h1>
+    </div>
+<div style="position: fixed; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; backdrop-filter: blur(20px); background-color: rgba(0, 0, 0, 0.15); color: #fff;">
+    <p style="margin: 0;">first os</p>
+    <p id="timeElement" style="margin: 0;">loading...</p>
 </div>
-  </body>
+
+<div id="movablewin1">
+
+<h1 style="padding: 10px; background-color: #fff; border-radius: 20%; height: 120px; width: 180px;">its movable<p style="background-color: #a31010;"> see told u</p></h1>
+
+</div>
+<div id="movablediv2">
+<style>
+  #movablediv2 {
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    border-radius: 40%;
+    background-color: #0e9c85;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+  }
+
+  #movablediv2:active {
+    cursor: grabbing;
+  }
+</style>
+<h2 style="color: #202ac2;">this too is</h2>
+<h1 style="color: #2211b9;">movable</h1>
+
+
+</div>
+
+
+<div id="movablediv3" style="width: 400px; height: 300px; background-color: #335229; border-radius: 40%;">
+
+  <img src="image3.jpg" style="width: 90px; height: 90px; border-radius: 100%; align-items: start;" />
+  <button class="window-control" id="welcomeclose" type="button">Close</button>
+  <button class="window-control" id="welcomeopen" type="button">firstos</button>
+  <h1 style="color: #9e8913;">this one moves toooo</h1>
+</div>
+
+
+
+
+<script src="script.js"></script>
+</body>
+
 
 </html>
